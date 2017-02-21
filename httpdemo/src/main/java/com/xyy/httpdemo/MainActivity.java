@@ -31,6 +31,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+		//结果显示文本框
     private TextView tvResult;
 
     @Override
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public User changeData(ResponceItem responce) {
                         if (responce.getCode() == 200) {
                             try {
+                            		//Json解析
                                 JSONObject obj = new JSONObject(responce.getString());
                                 User u = new User();
                                 int id = obj.optInt("id");
